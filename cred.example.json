@@ -1,0 +1,16 @@
+[
+  {
+    "username": "first bot username",
+    "password": "first bot password",
+    "shared_secret": "first bot shared secret",
+    "identity_secret": "first bot identity secret",
+    "steam_id": 1
+  },
+  {
+    "username": "second bot username",
+    "password": "second bot password",
+    "shared_secret": "second bot shared secret",
+    "identity_secret": "second bot identity secret",
+    "steam_id": 2
+  }
+]

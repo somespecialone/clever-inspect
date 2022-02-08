@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "clever-inspect"
+version = "1.0.0"
+description = "CSGO 🔫 items inspect service"
+authors = ["somespecialone <tkachenkodmitriy@yahoo.com>"]
+readme = "README.md"
+homepage = "https://github.com/somespecialone/clever-inspect/"
+repository = "https://github.com/somespecialone/clever-inspect/"
+keywords = ["steam", "csgo", "inspect", "steamio", "item"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+uvicorn = "^0.17.4"
+aiosqlite = "^0.17.0"
+SQLAlchemy = "^1.4.31"
+alembic = "^1.7.5"
+loguru = "^0.6.0"
+fastapi = "^0.73.0"
+steam-tradeoffer-manager = {git = "https://github.com/somespecialone/python-steam-tradeoffer-manager", rev = "master"}
+steam-ext-csgo = {git = "https://github.com/Gobot1234/steam-ext-csgo", rev = "main"}
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.0.0"
+pytest-mock = "^3.7.0"
+pytest-cov = "^3.0.0"
+requests = "^2.27.1"
+black = "*"
+
+[tool.black]
+line-length = 120
+target-version = ['py310']
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.coverage.run]
+source = ["app"]
+omit = ["app/services/pool/monkey_patch.py", "app/migrations/*"]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

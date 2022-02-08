@@ -1,0 +1,13 @@
+.git
+.idea
+.github
+.dockerignore
+.gitignore
+Dockerfile
+README.md
+LICENSE
+cred.example.json
+cred.json
+data
+docker-public
+tests

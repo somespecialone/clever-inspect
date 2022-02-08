@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  web-inspect:
+    image: somespecialone/clever-inspect
+    restart: unless-stopped
+    volumes:
+      - ./cred.json:/usr/workspace/inspect/cred.json:ro
+      - inspect-service-data:/usr/workspace/inspect/data
+    expose:
+      - "8000"
+
+  reverse-proxy:
+    image: nginx
+    restart: unless-stopped
+    logging:
+      driver: none
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    ports:
+      - "80:80"
+    depends_on:
+      - web-inspect
+
+volumes:
+  inspect-service-data:
