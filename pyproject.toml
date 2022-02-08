@@ -6,7 +6,7 @@ authors = ["somespecialone <tkachenkodmitriy@yahoo.com>"]
 readme = "README.md"
 homepage = "https://github.com/somespecialone/clever-inspect/"
 repository = "https://github.com/somespecialone/clever-inspect/"
-keywords = ["steam", "csgo", "inspect", "steamio", "item"]
+keywords = ["steam", "csgo", "inspect", "steamio", "fastapi", "uvicorn", "pydantic"]
 
 [tool.poetry.dependencies]
 python = "^3.10"

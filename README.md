@@ -4,9 +4,9 @@
 
 [![license](https://img.shields.io/github/license/somespecialone/clever-inspect)](https://github.com/somespecialone/clever-inspect/blob/master/LICENSE)
 [![Tests](https://github.com/somespecialone/clever-inspect/actions/workflows/tests.yml/badge.svg)](https://github.com/somespecialone/clever-inspect/actions/workflows/tests.yml)
-![Docker Automated build](https://img.shields.io/docker/automated/somespecialone/clever-inspect)
-![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/somespecialone/clever-inspect)
-![Docker Image Version (latest by date)](https://img.shields.io/docker/v/somespecialone/clever-inspect)
+[![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/somespecialone/clever-inspect)](https://hub.docker.com/r/somespecialone/clever-inspect)
+[![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/somespecialone/clever-inspect)](https://hub.docker.com/r/somespecialone/clever-inspect)
+[![Docker Image Version (latest by date)](https://img.shields.io/docker/v/somespecialone/clever-inspect)](https://hub.docker.com/r/somespecialone/clever-inspect)
 [![CodeFactor](https://www.codefactor.io/repository/github/somespecialone/clever-inspect/badge)](https://www.codefactor.io/repository/github/somespecialone/clever-inspect)
 [![codecov](https://codecov.io/gh/somespecialone/clever-inspect/branch/master/graph/badge.svg?token=H3JL81SL7P)](https://codecov.io/gh/somespecialone/clever-inspect)
 [![black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)

@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   web-inspect:
-    image: somespecialone/clever-inspect
+    image: somespecialone/clever-inspect:latest
     restart: unless-stopped
     volumes:
       - ./cred.json:/usr/workspace/inspect/cred.json:ro
