@@ -19,19 +19,26 @@ cases, other possible stuff) from [csgo-items-db](https://github.com/somespecial
 > This project was inspired most by [csgofloat-inspect](https://github.com/csgofloat/inspect) 💖
 
 ---
+
 ## Navigation
- - [Usage](#usage)
-   - [Request params](#request-params)
-   - [Response](#response)
-   - [Health ➕](#health-)
- - [Integrity 🧾](#integrity-schema-)
- - [Docker 🐳](#docker-)
- - [TODO 📑](#todo-)
+
+- [**Usage**](#usage)
+    - [Request params](#request-params)
+    - [Response](#response)
+    - [Health ➕](#health-)
+- [**Integrity** 🧾](#integrity-schema-)
+- [**Deployment** 🚀]()
+    - [Docker 🐳](#docker-)
+    - [Manual 🛠](#manual-)
+- [**Testing** 🧪](#testing-)
+- [**TODO** 📑](#todo-)
+
 ---
 
 ## Usage
 
 > All info about params, responses and requests available in `openapi.json` schema on `/docs` or `/redoc` path ❗
+> (thanks to [fastapi](https://github.com/tiangolo/fastapi)⚡ and others)
 
 ### Request params:
 
@@ -128,13 +135,15 @@ You can check health of app on `/health` path.
 
 ![integrity schema](https://github.com/somespecialone/csgo-items-db/blob/master/integrity.png?raw=true)
 
-## Docker 🐳
+## Deployment 🚀
+
+>To obtain secrets of steam account you can use [SDA](https://github.com/Jessecar96/SteamDesktopAuthenticator). Your bots
+don't need to have CSGO license, service will automatically request free license for you 💌
+
+### Docker 🐳
 
 Just copy content of [docker-public](docker-public)
 dir to work directory on your host machine and place filled [cred.json](cred.example.json) file near.
-
-To obtain secrets of steam account you can use [SDA](https://github.com/Jessecar96/SteamDesktopAuthenticator). Your bots
-don't need to have CSGO license, service will automatically request free license for you 💌
 
 Command to run:
 
@@ -149,6 +158,34 @@ List of possible **env variables** you can see in [config.py](app/core/config.py
 class.
 
 Service will be available on 80 default port ([localhost](http://localhost/) if you run it on local machine)
+
+### Manual 🛠
+
+Clone this repository, install dependencies with
+
+```shell
+poetry install --no-dev
+```
+
+Place filled [cred.json](cred.example.json) file in project root
+(choose preferable port), create `data` dir in project root and run with uvicorn:
+
+```shell
+uvicorn app.main:app --host 0.0.0.0 --port 8000
+```
+
+## Testing 🧪
+
+Simple clone repo, install dependencies and run `pytest` from project root.
+
+```shell
+poetry install
+
+poetry run pytest
+
+# or
+pytest
+```
 
 ## TODO 📑
 

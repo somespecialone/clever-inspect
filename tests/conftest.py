@@ -7,11 +7,10 @@ import json
 import pytest
 from fastapi.testclient import TestClient
 
+# set env vars before settings instance will be constructed
 CRED_PATH = pathlib.Path("./cred.example.json").resolve()
 os.environ["CRED_FILE"] = str(CRED_PATH)
-
-from app import main
-from app.core import config
+os.environ["DB_URL"] = "sqlite+aiosqlite://"  # in memory
 
 from .mocks import *
 
@@ -31,12 +30,9 @@ def temp_cred_file():
         return json.load(co)
 
 
-@pytest.fixture(scope="session", autouse=True)
-def temp_db():
-    config.settings.DB_URL = "sqlite+aiosqlite://"  # in memory
-
-
 @pytest.fixture(scope="session")
 def client():
+    from app import main
+
     with TestClient(main.app) as test_client:
         yield test_client
