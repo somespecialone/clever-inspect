@@ -1,9 +1,14 @@
+import os
 import asyncio
 import platform
+import pathlib
 import json
 
 import pytest
 from fastapi.testclient import TestClient
+
+CRED_PATH = pathlib.Path("./cred.example.json").resolve()
+os.environ["CRED_FILE"] = str(CRED_PATH)
 
 from app import main
 from app.core import config
@@ -21,17 +26,8 @@ def event_loop():
 
 
 @pytest.fixture(scope="session", autouse=True)
-def temp_cred_file(tmp_path_factory):
-    c = tmp_path_factory.mktemp("temp") / "cred.json"
-    c.touch()
-    with (config.settings.ROOT_DIR / "cred.example.json").open("r") as e:
-        example = json.load(e)
-    with c.open("w") as co:
-        json.dump(example, co)
-
-    config.settings.CRED_FILE = c
-
-    with c.open("r") as co:
+def temp_cred_file():
+    with CRED_PATH.open("r") as co:
         return json.load(co)
 
 

@@ -6,11 +6,13 @@ on:
     paths:
       - "app/**"
       - "pyproject.toml"
+      - "tests/**"
   pull_request:
     branches: [ master ]
     paths:
       - "app/**"
       - "pyproject.toml"
+      - "tests/**"
 
 jobs:
   build:
