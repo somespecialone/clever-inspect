@@ -11,7 +11,7 @@ class AppSettings(BaseSettings):
     ROOT_DIR: DirectoryPath = Path(__file__).parent.parent.parent
 
     # meta
-    PROJECT_TITLE: str = "clever-inspect"
+    PROJECT_TITLE: str = "Clever inspect"
     PROJECT_VERSION: str = "1.0.0"
     PROJECT_DESCRIPTION: str = "CSGO 🔫 items inspect service"
 

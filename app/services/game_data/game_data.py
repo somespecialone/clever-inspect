@@ -99,6 +99,9 @@ class GameData:
 
             cases = []
             for case_id in schema_item.get("cases", []):
+                case = {**self._cases[case_id]}
+                del case["items"]
+
                 cases.append(self._cases[case_id])
 
             if schema_item["paint"].get("phase"):

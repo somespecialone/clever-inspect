@@ -4,9 +4,8 @@ from app.api import router as api_router
 from app.core.config import settings
 from app.hooks import game_data_startup, db_startup, db_shutdown, pool_startup, pool_shutdown, logging_startup
 
-on_startup = (logging_startup, game_data_startup, db_startup, pool_startup)
-
-on_shutdown = (db_shutdown, pool_shutdown)
+on_startup = (logging_startup, game_data_startup, db_startup, pool_startup)  # pool should start last
+on_shutdown = (pool_shutdown, db_shutdown)  # and shutdown first
 
 app = FastAPI(
     debug=settings.DEBUG,

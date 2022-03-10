@@ -106,7 +106,14 @@ cases, other possible stuff) from [csgo-items-db](https://github.com/somespecial
     "type": {
       "category": "smg",
       "name": "MP7"
-    }
+    },
+    "cases": [  // optional
+      {
+        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_community_28.1f6e656d8fc297c9f2b65f2c05b8552d1cc63082.png",
+        "name": "Snakebite Case",
+        "set": "The Snakebite Collection"
+      }
+    ]
   },
   "quality_name": "Souvenir",
   "wear_name": "Field-Tested",  // optional
