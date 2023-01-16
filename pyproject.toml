@@ -23,7 +23,7 @@ steam-ext-csgo = {git = "https://github.com/Gobot1234/steam-ext-csgo", rev = "ma
 pytest = "^7.0.0"
 pytest-mock = "^3.7.0"
 pytest-cov = "^3.0.0"
-requests = "^2.27.1"
+requests = "^2.28.2"
 black = "*"
 
 [tool.black]
