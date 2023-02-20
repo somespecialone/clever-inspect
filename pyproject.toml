@@ -15,7 +15,7 @@ aiosqlite = "^0.17.0"
 SQLAlchemy = "^1.4.31"
 alembic = "^1.7.5"
 loguru = "^0.6.0"
-fastapi = "^0.73.0"
+fastapi = "^0.92.0"
 steam-tradeoffer-manager = {git = "https://github.com/somespecialone/python-steam-tradeoffer-manager", rev = "master"}
 steam-ext-csgo = {git = "https://github.com/Gobot1234/steam-ext-csgo", rev = "main"}
 
