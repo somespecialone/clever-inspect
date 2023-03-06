@@ -13,7 +13,7 @@ python = "^3.10"
 uvicorn = "^0.17.4"
 aiosqlite = "^0.17.0"
 SQLAlchemy = "^1.4.31"
-alembic = "^1.7.5"
+alembic = "^1.10.0"
 loguru = "^0.6.0"
 fastapi = "^0.73.0"
 steam-tradeoffer-manager = {git = "https://github.com/somespecialone/python-steam-tradeoffer-manager", rev = "master"}
