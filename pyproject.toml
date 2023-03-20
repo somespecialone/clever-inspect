@@ -10,7 +10,7 @@ keywords = ["steam", "csgo", "inspect", "steamio", "fastapi", "uvicorn", "pydant
 
 [tool.poetry.dependencies]
 python = "^3.10"
-uvicorn = "^0.17.4"
+uvicorn = "^0.21.1"
 aiosqlite = "^0.17.0"
 SQLAlchemy = "^1.4.31"
 alembic = "^1.7.5"
